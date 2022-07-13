@@ -1,15 +1,17 @@
 // == Import
-import './styles.css';
+import Messages from '../Messages';
+import Form from '../Form';
 
 // == Composant
 function App() {
 
   return (
     <div className="app">
-      <h1>Composant : App</h1>
+      <Messages />
+      <Form />
     </div>
   )
-};
+}
 
 // == Export
 export default App;
