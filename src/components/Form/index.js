@@ -11,14 +11,13 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addMessage(e.target.value));
+    dispatch(addMessage());
   }
 
-
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" placeholder="Saisissez votre message" aria-label="Message" value={currentMessage} onChange={handleChange} />
-      <button type="submit" aria-label="Envoyer" onSubmit={handleSubmit}>&gt;</button>
+      <button type="submit" aria-label="Envoyer" >&gt;</button>
     </form>
   )
 }

@@ -7,19 +7,22 @@ const initialState = {
   ],
   currentMessage: '',
 };
+
 function reducer(state = initialState, action = {}) {
   switch (action.type) {
 
     case WRITE_MESSAGE:
       return {
         ...state,
-        currentMessage: action.message
+        currentMessage: action.message,
       };
 
     case ADD_MESSAGE:
+      console.log(action);
       return {
         ...state,
-        messages: [...state.messages,action.currentMessage]
+        messages: [...state.messages, {...action.message,content:state.currentMessage}],
+        currentMessage: '',
       };
 
     default:
