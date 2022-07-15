@@ -1,6 +1,7 @@
 // == Import
 import Messages from '../Messages';
 import Form from '../Form';
+import './style.scss';
 
 // == Composant
 function Chat() {

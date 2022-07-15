@@ -1,4 +1,5 @@
 import {ADD_MESSAGE, WRITE_MESSAGE} from "../actions";
+import {getNextMessageID} from "../selectors";
 
 const initialState = {
   messages: [
@@ -18,10 +19,13 @@ function reducer(state = initialState, action = {}) {
       };
 
     case ADD_MESSAGE:
-      console.log(action);
       return {
         ...state,
-        messages: [...state.messages, {...action.message,content:state.currentMessage}],
+        messages: [...state.messages, {
+            id: getNextMessageID(state),
+            author: 'Franck',
+            content: state.currentMessage
+        }],
         currentMessage: '',
       };
 
