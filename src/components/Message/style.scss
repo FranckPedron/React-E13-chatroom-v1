@@ -18,9 +18,10 @@
 
     &::after {
       content: "";
-      border-left: 20px solid transparent;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid white;
+      background-color: white;
+      width: 1rem;
+      height: 1.25rem;
+      clip-path: polygon(0 100%, 100% 100%,100% 0);
       position: absolute;
       bottom: 0;
       left: 2.5rem;
