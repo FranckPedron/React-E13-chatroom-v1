@@ -1,19 +1,18 @@
 import PropTypes from "prop-types";
+import './style.scss';
 
-function Message({title, author}) {
+function Message({ content, author }) {
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+    <article className="message">
       <h2>{author}</h2>
-    </div>
+      <p>{content}</p>
+    </article>
   );
 }
 
-Message.propTypes =
-  {
-    title: PropTypes.string.isRequired,
+Message.propTypes = {
+    content: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   };
 

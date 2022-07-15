@@ -3,7 +3,7 @@ import Messages from '../Messages';
 import Form from '../Form';
 
 // == Composant
-function App() {
+function Chat() {
 
   return (
     <div className="app">
@@ -14,4 +14,4 @@ function App() {
 }
 
 // == Export
-export default App;
+export default Chat;
