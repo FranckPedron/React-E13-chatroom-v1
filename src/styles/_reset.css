@@ -157,3 +157,7 @@ input,
 button {
   outline: 0;
 }
+
+input, select, button {
+  font: inherit;
+}

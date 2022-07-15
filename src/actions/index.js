@@ -8,11 +8,7 @@ export const writeMessage = (message) => ({
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 
 export const addMessage = () => ({
-  type: ADD_MESSAGE,
-  message: {
-  id: 3,
-    author: 'Franck',
-    }
+  type: ADD_MESSAGE
 })
 
 
