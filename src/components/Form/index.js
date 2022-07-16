@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {addMessage, writeMessage} from "../../actions";
 import { Send } from 'react-feather'
 import './style.scss';
+import {useEffect} from "react";
 
 function Form() {
   const currentMessage = useSelector(state => state.currentMessage);
@@ -15,6 +16,9 @@ function Form() {
     e.preventDefault();
     dispatch(addMessage());
   }
+  useEffect(() => {
+    document .querySelector('.form-input').focus();
+  }, []);
 
   return (
     <form className="form" onSubmit={handleSubmit}>
