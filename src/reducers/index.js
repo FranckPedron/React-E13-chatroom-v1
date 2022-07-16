@@ -1,4 +1,4 @@
-import {ADD_MESSAGE, WRITE_MESSAGE} from "../actions";
+import {ADD_MESSAGE, SHOW_ERROR, WRITE_MESSAGE} from "../actions";
 import {getNextMessageID} from "../selectors";
 
 const initialState = {
@@ -7,6 +7,8 @@ const initialState = {
     {id:1, content:'Deuxième essai',author:'Testeur 2'}
   ],
   currentMessage: '',
+  displayError: false,
+  errorMessage: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -26,6 +28,15 @@ function reducer(state = initialState, action = {}) {
             author: 'Franck',
             content: state.currentMessage
         }],
+        currentMessage: '',
+        displayError: false,
+      };
+
+    case SHOW_ERROR:
+      return {
+        ...state,
+        displayError: true,
+        errorMessage: action.error,
         currentMessage: '',
       };
 

@@ -11,4 +11,9 @@ export const addMessage = () => ({
   type: ADD_MESSAGE
 })
 
+export const SHOW_ERROR = 'SHOW_ERROR';
 
+export const showError = (error) => ({
+  type: SHOW_ERROR,
+  error
+})
